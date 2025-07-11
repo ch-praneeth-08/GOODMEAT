@@ -1,0 +1,84 @@
+.custom-select-wrapper {
+  position: relative;
+}
+
+.custom-select-label {
+  display: block;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.custom-select-container {
+  position: relative;
+}
+
+.custom-select-button {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: var(--color-background);
+  color: var(--color-text-body);
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.custom-select-button:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.2);
+}
+
+.custom-select-icon {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding-right: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.custom-select-options {
+  position: absolute;
+  margin-top: 0.25rem;
+  max-height: 15rem;
+  width: 100%;
+  overflow: auto;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  z-index: 10;
+  border: 1px solid var(--color-border);
+}
+
+.custom-select-option {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  color: var(--color-text-body);
+}
+
+.custom-select-option.active {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.custom-select-check-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 0.75rem;
+}

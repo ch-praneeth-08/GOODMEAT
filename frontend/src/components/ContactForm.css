@@ -1,0 +1,50 @@
+.contact {
+  padding: 5rem 0;
+  background-color: var(--color-background);
+}
+.contact__container {
+  max-width: 550px;
+}
+.contact__text {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact__form {
+  background-color: var(--color-surface);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.form-group { 
+  margin-bottom: 1.5rem; 
+}
+.form-group label { 
+  display: block; 
+  margin-bottom: 0.5rem; 
+  font-weight: 600; 
+  font-size: 0.9rem; 
+  color: var(--color-text-muted); 
+}
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: var(--color-text-body);
+}
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.2);
+}
+
+/* --- 2. ADD THIS NEW STYLE --- */
+.form-button-container {
+  display: flex;
+  justify-content: center; /* This is the magic property that centers the button */
+  margin-top: 1rem; /* Add some space above the button */
+}

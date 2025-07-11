@@ -1,0 +1,26 @@
+.cta {
+  padding: 6rem 0;
+  /* Use the slightly lighter surface color for contrast */
+  background-color: var(--color-surface);
+}
+
+.cta__container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--color-text-primary); /* Use primary text color */
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary); /* Use secondary text color */
+  margin-bottom: 2rem;
+  max-width: 450px;
+}

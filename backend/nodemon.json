@@ -1,0 +1,10 @@
+{
+  "verbose": false,
+  "quiet": true,
+  "execMap": {
+    "js": "node"
+  },
+  "watch": ["./"],
+  "ignore": ["node_modules/**/node_modules"],
+  "ext": "js,json"
+}

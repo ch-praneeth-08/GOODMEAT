@@ -1,0 +1,109 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background-color: var(--color-background);
+  color: #fff;
+  padding: 8rem 0; /* Slightly less padding on all screens */
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -2;
+  background-image: url('https://res.cloudinary.com/dilysokz6/image/upload/v1752135422/hero_image_zwlmer.webp');
+  background-size: cover;
+  background-position: center center;
+  filter: blur(5px);
+  transform: scale(1.1); 
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background-color: rgba(26, 26, 26, 0.4);
+}
+
+.hero__container { 
+  position: relative;
+  z-index: 2;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.hero__title { 
+  font-size: 5rem; 
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem; 
+  color: var(--color-brand-accent);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8); 
+  line-height: 1.1; /* Add line-height for better wrapping */
+}
+
+.hero__tagline { 
+  font-size: 2.2rem; 
+  font-weight: 400; 
+  margin-bottom: 3.5rem; 
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7); 
+}
+
+.hero__buttons { 
+  display: flex; 
+  /* Allow buttons to stack on very small screens */
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 1rem; 
+}
+
+.hero .btn--secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+}
+
+.hero .btn--secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+}
+
+
+/* --- NEW: RESPONSIVE STYLES FOR MOBILE --- */
+@media (max-width: 768px) {
+  .hero {
+    padding: 6rem 0; /* Reduce vertical padding on mobile */
+  }
+
+  .hero__title {
+    font-size: 3.5rem; /* Significantly smaller title font size */
+    letter-spacing: 1px;
+  }
+
+  .hero__tagline {
+    font-size: 1.5rem; /* Smaller tagline font size */
+    margin-bottom: 3rem; /* Less space below tagline */
+  }
+
+  .hero__buttons {
+    flex-direction: column; /* Stack the buttons vertically */
+    align-items: center;
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  /* Make buttons take up a more accessible width on mobile */
+  .hero .btn {
+    width: 80%;
+    max-width: 300px;
+    padding: 1rem; /* Make buttons taller for easier tapping */
+    justify-content: center; /* Center the icon and text */
+  }
+}

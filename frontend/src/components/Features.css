@@ -1,0 +1,23 @@
+.features { padding: 5rem 0; }
+.features-grid { display: flex; flex-direction: column; gap: 5rem; }
+.feature-item { display: flex; align-items: center; gap: 4rem; }
+.feature-item.reversed { flex-direction: row-reverse; }
+.feature-item__image, .feature-item__content { flex: 1; }
+.feature-item__image img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); display: block; }
+.feature-item__content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text-heading); /* <-- This now correctly applies the red color */
+}
+.feature-item__content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+@media (max-width: 768px) {
+  .features { padding: 3rem 0; }
+  .feature-item, .feature-item.reversed { flex-direction: column; text-align: center; gap: 2rem; }
+  .feature-item__content { order: 2; }
+  .feature-item__image { order: 1; }
+}

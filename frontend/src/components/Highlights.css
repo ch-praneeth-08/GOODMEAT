@@ -1,0 +1,77 @@
+.highlights {
+  padding: 5rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+/* --- Top Grid Styling --- */
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 6rem;
+}
+
+.highlight-card {
+  text-align: center;
+}
+
+/* --- FIX: Removed the .highlight-card__icon-wrapper style --- */
+
+/* --- FIX: Added new styles for the image itself --- */
+.highlight-card__image {
+  width: 100%;             /* Make image take the full width of the card's column */
+  height: 200px;            /* Give it a fixed height */
+  object-fit: contain;      /* Ensure the whole image is visible without stretching */
+  margin-bottom: 1.5rem;    /* Add space below the image */
+  border-radius: 16px;      /* Give the image itself rounded corners */
+}
+
+.highlight-card__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-body);
+}
+
+.highlight-card__description {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  padding: 0 1rem;
+}
+
+/* --- Bottom Summary Styling --- */
+.highlights-summary__image-placeholder {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+
+.highlights-summary__image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.highlights-summary__text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--color-text-body);
+}
+
+.highlights-summary__text p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 800px;
+}
+
+/* --- RESPONSIVE STYLES --- */
+@media (max-width: 900px) {
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
