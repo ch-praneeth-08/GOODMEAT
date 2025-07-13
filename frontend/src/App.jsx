@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import './index.css';
 
@@ -32,10 +32,27 @@ const HomePage = () => (
   </>
 );
 
+function ScrollToTopOnHome() {
+  const location = useLocation();
+  React.useEffect(() => {
+    if (location.pathname === '/') {
+      window.scrollTo(0, 0);
+      // Remove hash if present
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname);
+      }
+      // Re-enable scrolling if disabled
+      document.body.style.overflow = '';
+    }
+  }, [location]);
+  return null;
+}
+
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <ScrollToTopOnHome />
         <div>
           <Header />
           <main>

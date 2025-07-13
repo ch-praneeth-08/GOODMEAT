@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Hero.css';
 import { FaWhatsapp } from 'react-icons/fa';
 import { motion } from 'framer-motion';
@@ -10,6 +10,11 @@ function Hero() {
   
   const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.2, }, }, };
   const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }, };
+
+  // Scroll to top when Hero mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section id="hero" className="hero">
